@@ -1,0 +1,49 @@
+- Sobre o atributo alt é sempre necessário que seja preenchido para imagens, porém, é possível deixar em branco em
+algumas situações, por exemplo em imagens decorativas, logo, ao deixar um atributo alt em branco, subentende-se que
+a imagem não tem relevância para o conteúdo da página.
+
+- No VsCode, para escolher estilos de formatação, ir até Configuração > Settings > Format, na seção de Editor,
+geralmente está definida como 'Default Formatter', porém, é possível selecionar outras opções, como o Prettier por
+exemplo. Também selecionar 'Format on Paste' e 'Format on Save'.
+
+- Projetos diferentes possuem requerimentos diferentes e abordagens diferentes, evite dogmatismos em CSS ao imaginar
+que existe uma maneira correta de fazer as coisas e que tudo deve ser daquele jeito.
+
+- É sugerido sempre avaliar a estrutura de design antes de começar a escrever o CSS, analisar o design, verificar
+cores, padrões para somente depois de uma análise inicial começar a escrever o CSS.
+
+- Text-wrap: Balance, é um recurso que ajuda a ajustar a quebra de linhas, isso pode ser útil em títulos, para evitar
+uma quebra automática e realizá-la de forma balanceada dentro do layout.
+
+- Text-wrap: Pretty, é mais um recurso que ajuda a configurar blocos de texto, que é onde esse recurso é especialmente
+útilo. Geralmente, tenta-se evitar que fiquem palavras soltas no fim dos paragrafos, como se a última linha de um
+parágrafo ficasse apenas com uma palavra, isso é o que o text-wrap pretty tenta evitar, fazendo com que nunca fique
+uma palavra solta no final do parágrafo.
+
+- Layers é uma feature relativamente nova em CSS, é um recurso que ajuda na organização do código, podendo usar as
+layers como blocos de de CSS para poder separar melhor o conteúdo e organizar o código. O único porém é que se houver
+layers que tratem ou configurem um mesmo elemento, a layer que for declarada por último ganhará na especificidade.
+
+- Sobre as diferenças entre especificidade e herança (inheritance), Layers não impactam na herança, ou seja, se um
+elemento foi configurado fora da layers e existerem elementos semelhantes dentro da layers, as configurações de fora
+somente serão aplicadas aos elementos de forma, de uma certa forma as Layers quebram a herança de definições.
+
+- Não é recomendada a definição do tamanho da fonte em pixels, isso principalmente por questões de acessibilidade, pois
+se você define em pixels, se o usuário definiu alguma coisa diferente em pixels no navegador, o CSS não respeitará essa
+definição e irá sobrepor a escolha feita. Se você definir em REM ou M, a fonte se ajusatará por si só, não importando as
+definições que o usuário tenha feito. Se, provavelmente, o usuário fez alguma configuração no seu próprio browser sobre
+o tamanho da fonte, isso geralmente acontece por não querer as fontes muito grandes. Assim, se o usuário fez alguma
+definição por si só, essa decisão precisa ser respeitada sem que as nossas escolhas sobreponham as escolhas do usuário.
+
+- Criação de primitivas(variaveis) é o primeiro estágio de adaptação de design systems, as layers semanticas são aquilo
+que descrevem para que determinada coisa ou elemento é usado. Custom properties é o proximo passo além das primitivas
+(variáveis), são elementos que serão preconfigurados recebendo os valores das primtivas.
+
+- As vezes é necessário criar links com mais sentido e significado. Visualmente é possível enxergar e entender o
+contexto de alguns links posicionados dentro do fluxo de layout da página, porém, para leitores de tela e tecnologias
+assistivas, é necessário que esses links tenham um significado mais claro. Por exemplo, se você tem um link que leva
+a uma página de contato, é interessante que o link tenha um texto que descreva o que ele faz, como "Entre em contato
+conosco", ao invés de simplesmente "Clique aqui". Isso ajuda a tornar o site mais acessível e compreensível para
+pessoas que usam leitores de tela ou outras tecnologias assistivas. Assim, um bom recurso é aplicar um span para
+esconder o restante do texto descritivo do link, deixando uma opção viável para o usuário normal e também para o
+usuário que utiliza tecnologias assistivas.
