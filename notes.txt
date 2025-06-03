@@ -71,3 +71,7 @@ exemplo, para adicionar uma margem entre os elementos, mas não antes do primeir
 - A razão para se usar EM ao invés de REM em margens, tanto superior quanto inferior, é porque o REM tem o valor de
 pixels definidio, enquanto o EM se ajusta em relação ao tamanho da fonte, gerando um espaçamento mais harmonioso do que
 o REM, que pode gerar um espaçamento fixo.
+
+- Para que o menu hamburger funcione corretamente, é necessário que não haja nenhum elemento entre o botão e a lista
+de navegação, exatamente pelo uso do seletor "+", já que esse seletor busca o elemento que está logo abaixo, assim,
+a expansão ou abertura do menu seria quebrada.
