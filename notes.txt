@@ -75,3 +75,42 @@ o REM, que pode gerar um espaçamento fixo.
 - Para que o menu hamburger funcione corretamente, é necessário que não haja nenhum elemento entre o botão e a lista
 de navegação, exatamente pelo uso do seletor "+", já que esse seletor busca o elemento que está logo abaixo, assim,
 a expansão ou abertura do menu seria quebrada.
+
+- Com um atributo do tipo visually-hidden, é possível esconder elementos e utilizá-los para melhorar o contexto e as
+informações de um determinado elemento, sem que o elemento seja disposto no layout, isso torna a experiência mais rica
+para quem utiliza tecnologias assistivas.
+
+- É importante avaliar se o componente ou área criada é genérico ou específico, se é algo que pode ser repetido, o
+ideal é utilizar nomes que sejam mais genéricos, se são coisas que não vão se repetir, parte-se para nomes mais
+específicos.
+
+- Podemos encontrar incosistências com o Grid, principalmente com o stretch, pois a tendência do Grid é ocupar todo o
+espaço disponível. É possível encontrar várias soluções, porém, nenhuma resolveria verdadeiramente o problema, em casos
+como esse é importante levar em consideração a possibilidade ou necessidade de refatorar o layout, muitas vezes um
+layout pede a uso de Grid, mas a verdadeira e melhor solução seria utilizar o Flexbox, o mesmo acontece ao inverso.
+
+- Planeje antes de escrever o CSS, isso ajuda a evitar problemas futuros e facilita a manutenção do código.
+
+- Sempre olhe para o contexto mais amplo pequeno, partindo de generalismos até particularidades, verificar a repetição
+de formas, conteúdos e ou componentes, pode facilitar na construção do layout. Conteúdos mais genéricos tendem a se
+repetir, portanto, é mais indicado a criação de classes e utilitários que facilitem a construção do layout. Itens com
+mais particularidades, tendem a se repetir menos, sendo o ideal que se construção uma configuração específica para
+esse conteúdos, elementos e ou componentes.
+
+- Tente primeiro analisar o projeto partindo de um ponto de vista mais amplo até o mais peculiar. Do macro ao micro.
+
+- Planejar as layers antecipadamente também pode ser útil, verificar dentro do projeto quais layers serão utilizadas
+facilita durante a execução do projeto. Também é possível a utilização de sublayers, isso obviamente em projetos
+maiores e com mais necessidade de organização das informações.
+
+- Layers funcionam para a organização do projeto, usá-las como uma forma de criar escopos locais pode ser um problema
+pois os níveis de especificades podem ser distintos e em alguns projetos até difícil de entender o que está acontecendo
+com a precedência das classes.
+
+- É possível criar filtros apenas com o CSS, na folha de estilos tem um exemplo de seletor que poderi fazer isso, porém,
+não é uma prática recomendada, Javascript pode fazer isso muito melhor e com menos esforço.
+
+- O eventListener "change" é mais útil em alguns casos do que o "click".
+
+- A ordem do carregamento do CSS dentro da folha de estilos também é importante, pois ela determina a ordem em que os
+elementos serão carregados.
